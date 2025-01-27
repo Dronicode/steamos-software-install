@@ -14,8 +14,14 @@ sudo pacman-key --populate archlinux
 sudo pacman-key --populate holo  
 ```
 - Install stuff
+
+-- Dev tools
 ```
 sudo pacman -S dotnet-sdk  
+```
+-- Needed for GitHub Desktop
+```
+sudo pacman -S gnome-keyring
 ```
 - Re-enable read only mode
 ```
