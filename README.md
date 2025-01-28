@@ -19,9 +19,10 @@ sudo pacman-key --populate holo
 ```
 sudo pacman -S dotnet-sdk  
 ```
--- Needed for GitHub Desktop
+-- Need gnome keyring for GitHub Desktop
 ```
 sudo pacman -S gnome-keyring
+sudo pacman -S seahorse
 ```
 - Re-enable read only mode
 ```
