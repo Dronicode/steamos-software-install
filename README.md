@@ -13,16 +13,25 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux  
 sudo pacman-key --populate holo  
 ```
-- Install stuff
-
--- Dev tools
+- install yay for AUR access
 ```
-sudo pacman -S dotnet-sdk  
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+git checkout 96f90180a3cf72673b1769c23e2c74edb0293a9f
+makepkg -si
 ```
--- Need gnome keyring for GitHub Desktop
+- Need gnome keyring for GitHub Desktop
 ```
 sudo pacman -S gnome-keyring
 sudo pacman -S seahorse
+```
+- Real version of VSCode because the flatpak doesn't let me enable themes with awesome ridiculous custom CSS animations
+```
+yay -S visual-studio-code-bin
+```
+- SDKs
+```
+sudo pacman -S dotnet-sdk  
 ```
 - Re-enable read only mode
 ```
