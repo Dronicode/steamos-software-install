@@ -20,6 +20,13 @@ cd yay-bin
 git checkout 96f90180a3cf72673b1769c23e2c74edb0293a9f
 makepkg -si
 ```
+- 1Password (GPG key: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22 (13/02/2025))
+```
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
+git clone https://aur.archlinux.org/1password.git
+cd 1password
+makepkg -si
+```
 - Need gnome keyring for GitHub Desktop
 ```
 sudo pacman -S gnome-keyring
