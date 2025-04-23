@@ -32,9 +32,12 @@ makepkg -si
 sudo pacman -S gnome-keyring
 sudo pacman -S seahorse
 ```
-- Real version of VSCode because the flatpak doesn't let me enable themes with awesome ridiculous custom CSS animations
+- Real version of VSCode because the flatpak doesn't let me enable themes with awesome ridiculous custom CSS animations.
+- Also set self as owner to run it as admin so the custom CSS can be enabled.
+- Need to repeat both these commands for each update.
 ```
 yay -S visual-studio-code-bin
+sudo chown -R $(whoami) /opt/visual-studio-code
 ```
 - SDKs
 ```
