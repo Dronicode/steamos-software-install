@@ -43,11 +43,15 @@ sudo chown -R $(whoami) /opt/visual-studio-code
 ```
 sudo pacman -S dotnet-sdk  
 ```
-- Enable RPC for Discord
+- Don't use flatpak Discord, the RPC is busted.
 ```
-mkdir -p ~/.config/user-tmpfiles.d
-echo 'L %t/discord-ipc-0 - - - - app/com.discordapp.Discord/discord-ipc-0' > ~/.config/user-tmpfiles.d/discord-rpc.conf
-systemctl --user enable --now systemd-tmpfiles-setup.service
+sudo pacman -S discord
+```
+- Add this to ~/.config/discord/settings.json
+```
+{
+  "SKIP_HOST_UPDATE": true
+}
 ```
 - Re-enable read only mode
 ```
