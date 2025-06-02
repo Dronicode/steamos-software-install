@@ -53,6 +53,10 @@ sudo pacman -S discord
   "SKIP_HOST_UPDATE": true
 }
 ```
+- Also add Vencord
+```
+sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"
+```
 - Re-enable read only mode
 ```
 sudo steamos-readonly enable  
