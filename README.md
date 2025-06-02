@@ -2,6 +2,8 @@
 
 SteamOS is read-only by default and anything installed by package managers is wiped by OS updates, so here I'll record all the commands used so I can remember and run them again when needed. Probably I'll turn it into a bash script eventually.  
 
+Note from first update, it seems like anything installed with makepkg cannot simply be reinstalled the same way. It cannot overwrite or force itself over the residual files from the previous installation.
+--overwrite "*"
   
 - Disable read only mode to enable sw installs using pacman
 ```
@@ -13,19 +15,17 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux  
 sudo pacman-key --populate holo  
 ```
-- install yay for AUR access
+- install yay for AUR access (for a reinstall after OS update, a reboot may be necessary after this step to proceed further.)
 ```
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 git checkout 96f90180a3cf72673b1769c23e2c74edb0293a9f
 makepkg -si
 ```
-- 1Password (GPG key: 3FEF9748469ADBE15DA7CA80AC2D62742012EA22 (13/02/2025))
+- 1Password
 ```
-curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
-git clone https://aur.archlinux.org/1password.git
-cd 1password
-makepkg -si
+yay -S 1password
+yay -S 1password-cli
 ```
 - Need gnome keyring for GitHub Desktop
 ```
