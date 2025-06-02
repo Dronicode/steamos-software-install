@@ -32,16 +32,18 @@ yay -S 1password-cli
 sudo pacman -S gnome-keyring
 sudo pacman -S seahorse
 ```
+- Dotnet
+```
+sudo pacman -S dotnet-sdk  
+sudo pacman -S dotnet-runtime  
+sudo pacman -S aspnet-runtime  
+```
 - Real version of VSCode because the flatpak doesn't let me enable themes with awesome ridiculous custom CSS animations.
 - Also set self as owner to run it as admin so the custom CSS can be enabled.
 - Need to repeat both these commands for each update.
 ```
 yay -S visual-studio-code-bin
 sudo chown -R $(whoami) /opt/visual-studio-code
-```
-- SDKs
-```
-sudo pacman -S dotnet-sdk  
 ```
 - Don't use flatpak Discord, the RPC is busted.
 ```
