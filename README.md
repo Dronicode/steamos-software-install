@@ -15,6 +15,10 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux  
 sudo pacman-key --populate holo  
 ```
+- Just in case
+```
+sudo pacman -S --needed git base-devel
+```
 - install yay for AUR access (for a reinstall after OS update, a reboot may be necessary after this step to proceed further.)
 ```
 git clone https://aur.archlinux.org/yay-bin.git
