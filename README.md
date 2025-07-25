@@ -28,6 +28,7 @@ makepkg -si
 ```
 yay -Syu
 ```
+- Probably at this point go through linux-headers.md in case that needs doing (again).
 - 1Password
 ```
 yay -S 1password
